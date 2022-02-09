@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="logo"><h1>JAUNE</h1></div>
-    <div class="nav">
-        <a href="#">SERVICIOS</a>
-        <a href="#">GALERIA</a>
-        <a href="#">TURNOS</a>
+    <div class="logo">
+        <a href="#hero"><h1>JAUNE</h1></a>
     </div>
-    <section>
+    <div class="nav">
+        <a href="#services">servicios</a>
+        <a href="#">galeria</a>
+        <a href="#">turnos</a>
+    </div>
+    <section id="hero">
         <div>
             <div class="slide-show">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
+                <div class="slider"></div>
+                <div class="slider"></div>
+                <div class="slider"></div>
             </div>
             <div class="selector-slide">
-                <input type="radio" value="1">
-                <input type="radio" value="2">
-                <input type="radio" value="3">
+                <input type="radio" name="slider-radio" value="1">
+                <input type="radio" name="slider-radio" value="2">
+                <input type="radio" name="slider-radio" value="3"> 
             </div>
         </div>
+    </section>
+
+    <section id="services">
+        <div class="img-services"></div>
+        <div class="img-circle-services"></div>
+        <div class="img-circle-services"></div>
+        <div class="img-circle-services"></div>
     </section>
 </body>
 </html>
