@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
+:root {
+    --primarypink: #EB9B9A;
+    --primarygray: #515151;
+    --accent: #2E3A59;
+    --secondarypink: #E3A5A4;
+}
+* {
+    margin: 0;
+    text-decoration: none;
+    color: var(--primarygray);
+}
+
+
+body {
+    background-color: var(--primarypink);
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    display: flex;
+    height: 100vh;
+    width: 75%;
+    background-color: var(--secondarypink);
+}
+
+
+/*################################*/
+/*                               */
+/*  LOGO AND NAVIGATION BAR     */
+/*                             */
+/*############################*/
+
+.logo {
+    line-height: 15vh;
+    height: 0;
+    font-size: 2em;
+    letter-spacing: 1em;
+    font-style: italic;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+.nav {
+    flex-direction: row;
+    position: sticky;
+    height: 0;
+    top: 13vh;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav a{
+    color: var(--primarygray);
+    text-transform: uppercase;
+
+    font-size: 1em;
+    letter-spacing: .3em;
+
+}
+.nav a::after{
+    display: block;
+    content: '';
+    border-bottom: 2px var(--accent) solid;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+.nav a:hover, a:focus{
+    color: var(--accent);
+    outline: none;
+}
+.nav a:hover::after, a:focus::after{
+    transform: scaleX(1);
+}
+
+/*################################*/
+/*                               */
+/*         HERO SECTION         */
+/*                             */
+/*############################*/
+
+.slide-show{
+    margin-top: 18vh;
+
+}
+.selector-slide{
+    /* radio button */
+}
+
+/*################################*/
+/*                               */
+/*      SERVICES SECTION        */
+/*                             */
+/*############################*/
+.img-services{
+    display: row;
+    justify-content: center;
+    
+}
+
+.img-circle-services {
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+    background-color: red;
+}
+
+/*################################*/
+/*                               */
+/*       GALERY SECTION         */
+/*                             */
+/*############################*/
+
+
+/*################################*/
+/*                               */
+/*          ANIMATIONS          */
+/*                             */
+/*############################*/
+
+
+
+/*################################*/
+/*                               */
+/*      RESPONSIVE CODE         */
+/*                             */
+/*############################*/
