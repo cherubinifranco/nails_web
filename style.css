@@ -4,7 +4,7 @@
 /*             Imports          */
 /*                             */
 /*############################*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&display=swap');
 
 /*################################*/
@@ -16,6 +16,7 @@
 :root {
     --base: #e6e4e4;
     --primary: #5f5f5f;
+    --secondary: #a5a5a5;
     --accent: #EB9B9A;
     --accent2: #ce8786;
 }
@@ -31,6 +32,7 @@ html {
 }
 body{
     background-color: var(--base);
+    font-family: 'Jost', sans-serif;
 }
 
 header {
@@ -53,19 +55,28 @@ section{
 /*                             */
 /*############################*/
 
-li, a, button {
-    font-family: "Montserrat", sans-serif;
+li, a, button{
     font-weight: 500;
     font-size: 1rem;
     letter-spacing: .2rem;
     color: var(--primary);
     text-decoration: none;
 }
-h1, p{
+#hero h1, #hero p{
     font-family: "Bodoni Moda", serif;
     text-align: center;
 }
 
+#service .service_card h2 {
+    position: relative;
+    top: -5vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--base);
+}
+#service .service_card p {
+    padding: 10px;
+}
 /*################################*/
 /*                               */
 /*         HEADER               */
@@ -135,17 +146,18 @@ button:hover{
 }
 #svg1{
     position: absolute;
-    right: 20%;
+    top: 7%;
+    right: 25%;
     width: 35vw;
 }
 .path {
     fill: none;
     stroke-width: 0.75;
     stroke-miterlimit: 10;
-    stroke: var(--primary);
+    stroke: var(--secondary);
     stroke-dasharray: 2500;
     stroke-dashoffset: 1000;
-    animation: dash 6s infinite ease-in-out alternate;
+    animation: dash 15s forwards;
 }
 
 /*################################*/
@@ -153,6 +165,24 @@ button:hover{
 /*      SERVICES SECTION        */
 /*                             */
 /*############################*/
+#service {
+    background-color: red;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.service_card {
+    width: 30%;
+    border-radius: 15px;
+    height: 70vh;
+    background-color: var(--primary);
+}
+.service_card img {
+    border-radius: 15px 15px 0 0;
+    max-height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
 
 
 /*################################*/
@@ -182,3 +212,12 @@ button:hover{
 /*      RESPONSIVE CODE         */
 /*                             */
 /*############################*/
+@media screen and (max-width: 768px){
+    #svg1{ top: 10%;}
+    #service{
+        flex-direction: column;
+        height: auto;
+    }
+    #service .service_card{ margin: 20px; width: 80%;     height: 50vh;};
+    #service .seer
+}
