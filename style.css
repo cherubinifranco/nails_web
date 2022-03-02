@@ -16,9 +16,9 @@
 :root {
     --base: #e6e4e4;
     --primary: #5f5f5f;
-    --secondary: #a5a5a5;
+    --secondary:#d1d0d0;
     --accent: #EB9B9A;
-    --accent2: #ce8786;
+    --accent2: #EED3BE;
 }
 * {
     box-sizing: border-box;
@@ -31,8 +31,12 @@ html {
     scroll-behavior: smooth;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background-color: var(--base);
     font-family: 'Jost', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -47,6 +51,7 @@ header {
 section{
     display: flex;
     height: 100vh;
+    width: 90%;
 }
 
 /*################################*/
@@ -67,15 +72,43 @@ li, a, button{
     text-align: center;
 }
 
-#service .service_card h2 {
-    position: relative;
-    top: -5vh;
-    font-size: 1.5rem;
+#service .service_card .service_title {
+    height: 0;
+    font-display: swap;
     font-weight: 600;
+    position: relative;
+    top: -3em;
+    font-size: 1.5rem;
     color: var(--base);
 }
 #service .service_card p {
     padding: 10px;
+}
+
+.card_price_box h2 {
+    font-size: 1.3rem;
+}
+
+h2 span{
+    padding: 0 2em;
+}
+
+/*################################*/
+/*                               */
+/*         BUTTONS              */
+/*                             */
+/*############################*/
+
+button {
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent);
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+button:hover{
+    background-color: var(--accent2);
 }
 /*################################*/
 /*                               */
@@ -111,18 +144,7 @@ li, a, button{
 .nav_links li a:hover::after, li a:focus::after{
     transform: scaleX(1);
 }
-button {
-    text-transform: uppercase;
-    padding: 0.6rem 1.5rem;
-    background-color: var(--accent);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all .3s ease 0s;
-}
-button:hover{
-    background-color: var(--accent2);
-}
+
 /*################################*/
 /*                               */
 /*         HERO SECTION         */
@@ -141,8 +163,10 @@ button:hover{
     font-size: 3rem;
 }
 #hero p {
+    background-color: var(--base);
     margin-top: 10%;
     width: 40ch;
+    padding: 0 2em;
 }
 #svg1{
     position: absolute;
@@ -154,7 +178,7 @@ button:hover{
     fill: none;
     stroke-width: 0.75;
     stroke-miterlimit: 10;
-    stroke: var(--secondary);
+    stroke: var(--primary);
     stroke-dasharray: 2500;
     stroke-dashoffset: 1000;
     animation: dash 15s forwards;
@@ -166,16 +190,16 @@ button:hover{
 /*                             */
 /*############################*/
 #service {
-    background-color: red;
     justify-content: space-around;
     align-items: center;
     text-align: center;
 }
+
 .service_card {
-    width: 30%;
+    width: 40ch;
     border-radius: 15px;
-    height: 70vh;
-    background-color: var(--primary);
+    height: 35em;
+    background-color: var(--secondary);
 }
 .service_card img {
     border-radius: 15px 15px 0 0;
@@ -183,6 +207,34 @@ button:hover{
     width: 100%;
     object-fit: cover;
 }
+.service_card .service_description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+}
+.service_card .service_description p {
+    width: 80%;
+}
+.service_card .card_price_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 3em; 
+}
+
+.card_price_box h2 {
+    width: 60%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+.card_price_box h2 span{
+    background-color: var(--secondary);
+}
+
 
 
 /*################################*/
@@ -212,12 +264,12 @@ button:hover{
 /*      RESPONSIVE CODE         */
 /*                             */
 /*############################*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1200px){
     #svg1{ top: 10%;}
     #service{
         flex-direction: column;
         height: auto;
     }
-    #service .service_card{ margin: 20px; width: 80%;     height: 50vh;};
-    #service .seer
+    #service .service_card{ margin: 20px; width: 80%; height: 40em;};
+    #service .service_card img {max-height: 70%;}
 }
