@@ -8,10 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <a href="#"><img src="img/logo.png" alt="logo"></a>
-        <nav>
-            <ul class="nav_links">
+    <header> 
+        <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+
+        <button class="mobile_nav_toggle"></button>
+
+        <nav id="primary_navigation">
+            <ul class="nav_links" data-visible="false">
                 <li><a href="#service">Servicios</a></li>
                 <li><a href="#galery">Galeria</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -43,7 +46,7 @@
             <div class="card_price_box">
                 <h2><span>$600</span></h2>
             </div>
-                <button>Seleccionar</button>
+                <button class="service_btn">Seleccionar</button>
         </div>
 
         <div class="service_card">
@@ -58,7 +61,7 @@
             <div class="card_price_box">
                 <h2><span>$800</span></h2>
             </div>
-                <button>Seleccionar</button>
+                <button class="service_btn">Seleccionar</button>
         </div>
         
         <div class="service_card">
@@ -73,15 +76,35 @@
             <div class="card_price_box">
                 <h2><span>$900</span></h2>
             </div>
-                <button>Seleccionar</button>
+                <button class="service_btn">Seleccionar</button>
         </div>
-        
+    </section>
+
+    
+    <section id="galery">
+
+
+
+
+        <div id="svg2"></div>
+
+
+
+
+
+
+
+
+
 
 
     </section>
 
-    
-    <section id="galery"></section>
+
+
+
+
+
     <section id="about"></section>
     <section id="contact"></section>
 
