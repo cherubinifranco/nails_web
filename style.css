@@ -13,6 +13,7 @@
 /*                             */
 /*############################*/
 
+
 :root {
     --base: rgba(230, 228, 228, 1);
     --base2: #dadada;
@@ -39,6 +40,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 5;
+    overflow-x: hidden;
 }
 
 header {
@@ -108,7 +110,7 @@ h2 span{
 /*                             */
 /*############################*/
 
-button {
+.service_btn {
     font-weight: 600;
     padding: 0.6rem 1.2rem;
     background-color: var(--accent);
@@ -116,7 +118,7 @@ button {
     cursor: pointer;
     transition: all .3s ease 0s;
 }
-button:hover{
+.service_btn:hover{
     background-color: var(--accent2);
 }
 /*################################*/
@@ -125,9 +127,15 @@ button:hover{
 /*                             */
 /*############################*/
 .logo {
+    margin-top: 20px;
     cursor: pointer;
 }
-
+.mobile_nav_toggle {
+    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: url(img/menu-icon.svg);
+}
 .nav_links {
     list-style: none;
 }
@@ -153,6 +161,40 @@ button:hover{
 .nav_links li a:hover::after, li a:focus::after{
     transform: scaleX(1);
 }
+
+@media (max-width: 767px){
+    .nav_links{
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        inset: 0 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10rem 2rem;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    .nav_links li a{
+        font-size: 2rem;
+        margin: 10px 0;
+        color: var(--base2);
+    }
+    .nav_links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile_nav_toggle {
+        display: block;
+        position: absolute;
+        width: 2rem;
+        border: none;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+    }
+}
+
 
 /*################################*/
 /*                               */
@@ -180,6 +222,14 @@ button:hover{
     right: 25%;
     width: 35vw;
 }
+
+#svg2 {
+    margin-top: 100px;
+    position: absolute;
+    right: 35%;
+    width: 35vw;
+}
+
 .path {
     fill: none;
     stroke-width: 0.75;
@@ -202,9 +252,10 @@ button:hover{
 }
 
 .service_card {
+    margin-top: 20px;
     width: 20em;
     border-radius: 15px;
-    height: 34em;
+    height: 33em;
     background-color: var(--base2);
 }
 .service_card .service_img {
@@ -297,5 +348,7 @@ button:hover{
 @media screen and (max-width: 1200px){
     #service{
         flex-wrap: wrap;
+        height: auto;
     }
+    
 }
