@@ -43,8 +43,8 @@ body{
 }
 
 header {
-    width: 90%;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     height: 0;
     top: 0;
     display: flex;
@@ -58,7 +58,7 @@ section{
     margin-bottom: 15px;
     display: flex;
     height: 100vh;
-    width: 80%;
+    width: 85%;
 }
 
 /*################################*/
@@ -74,10 +74,7 @@ li, a, button{
     color: var(--primary);
     text-decoration: none;
 }
-#hero h1, #hero p{
-    font-family: "Bodoni Moda", serif;
-    text-align: center;
-}
+
 
 #service .service_card .service_title {
     height: 0;
@@ -126,7 +123,8 @@ h2 span{
 /*                             */
 /*############################*/
 .logo {
-    margin-top: 20px;
+    top: 1rem;
+    height: 1.5rem;
     cursor: pointer;
 }
 .mobile_nav_toggle {
@@ -188,29 +186,12 @@ h2 span{
         width: 2rem;
         border: none;
         aspect-ratio: 1;
-        top: 2rem;
+        top: 1rem;
         right: 2rem;
         z-index: 9999;
     }
 }
 
-@media screen and (max-width: 768px){
-    #svg1{ top: 10%;}
-    #service{
-        flex-direction: column;
-        height: auto;
-    }
-    #service .service_card{width: 80%;};
-    #service .service_card img {max-height: 70%;}
-}
-
-@media screen and (max-width: 1200px){
-    #service{
-        flex-wrap: wrap;
-        height: auto;
-    }
-    
-}
 
 /*################################*/
 /*                               */
@@ -222,6 +203,10 @@ h2 span{
     justify-content: flex-start;
     align-items: center;
     margin-left: 15%;
+}
+#hero h1, #hero p{
+    font-family: "Bodoni Moda", serif;
+    text-align: center;
 }
 #hero h1{
     font-size: 3rem;
@@ -239,13 +224,6 @@ h2 span{
     width: 35vw;
 }
 
-#svg2 {
-    margin-top: 100px;
-    position: absolute;
-    right: 35%;
-    width: 35vw;
-}
-
 .path {
     fill: none;
     stroke-width: 0.75;
@@ -254,6 +232,24 @@ h2 span{
     stroke-dasharray: 2500;
     stroke-dashoffset: 1000;
     animation: dash 15s forwards;
+}
+
+@media (max-width: 768px){
+    #hero {
+        margin-left: 0;
+        justify-content: center;
+    }
+    #hero p {
+        width: 30ch;
+        padding: 0;
+        margin: 2em auto auto auto;
+    }
+    #svg1{
+        position: absolute;
+        top: 10%;
+        right: 35%;
+        width: 35vw;
+    }
 }
 
 /*################################*/
@@ -322,14 +318,45 @@ h2 span{
     background-color: var(--base2);
 }
 
+@media (max-width: 768px){
+    .service_card{
+        width: 100%;
+        height: 90vh;
+    }
+    .service_card img {max-height: 70%;}
+    #service{
+        flex-direction: column;
+        height: auto;
+    }
+    #service .service_card .service_description p {
+        margin-top: 5vh;
+    }
+    .service_card .card_price_box {
+        margin-top: 6vh;
+    }
+}
 
+@media screen and (max-width: 1200px){
+    #service{
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
 
 /*################################*/
 /*                               */
 /*       GALERY SECTION         */
 /*                             */
 /*############################*/
-
+#svg2 {
+    background: url(img/hand.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    width: 85vw;
+    margin-top: 100px;
+    position: absolute;
+}
 
 /*################################*/
 /*                               */
