@@ -40,11 +40,10 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 5;
-    overflow-x: hidden;
 }
 
 header {
-    width: 100%;
+    width: 90%;
     position: sticky;
     height: 0;
     top: 0;
@@ -59,7 +58,7 @@ section{
     margin-bottom: 15px;
     display: flex;
     height: 100vh;
-    width: 90%;
+    width: 80%;
 }
 
 /*################################*/
@@ -195,6 +194,23 @@ h2 span{
     }
 }
 
+@media screen and (max-width: 768px){
+    #svg1{ top: 10%;}
+    #service{
+        flex-direction: column;
+        height: auto;
+    }
+    #service .service_card{width: 80%;};
+    #service .service_card img {max-height: 70%;}
+}
+
+@media screen and (max-width: 1200px){
+    #service{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+}
 
 /*################################*/
 /*                               */
@@ -335,20 +351,3 @@ h2 span{
 /*      RESPONSIVE CODE         */
 /*                             */
 /*############################*/
-@media screen and (max-width: 768px){
-    #svg1{ top: 10%;}
-    #service{
-        flex-direction: column;
-        height: auto;
-    }
-    #service .service_card{ margin: 20px; width: 80%; height: 43em;};
-    #service .service_card img {max-height: 70%;}
-}
-
-@media screen and (max-width: 1200px){
-    #service{
-        flex-wrap: wrap;
-        height: auto;
-    }
-    
-}
