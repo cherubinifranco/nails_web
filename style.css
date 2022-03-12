@@ -334,12 +334,16 @@ h2 span{
         width: 100%;
         height: 80vh;
     }
-    .service-card img {max-height: 70%;}
-    .service-card .service-description p {
-        margin-top: 5vh;
+    .service-card .service-description {
+        height: auto;
+        margin: 6vh 0;
     }
-    .service-card .card-price-box {
-        margin-top: 6vh;
+    .service-card img {max-height: 70%;}
+    .card-price-box {
+        margin: 5px 0;
+    }
+    .btn{
+
     }
 }
 
