@@ -33,33 +33,38 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    display: flex;
-    flex-direction: column;
     background-color: var(--base);
     font-family: 'Jost', sans-serif;
-    justify-content: center;
-    align-items: center;
     z-index: 5;
-    overflow-x: hidden;
 }
 
 header {
     width: 100%;
-    position: sticky;
-    height: 0;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    z-index: 10;
+    z-index: 100;
     background-color: var(--base);
 }
 section{
-    margin-bottom: 15px;
     display: flex;
     height: 100vh;
-    width: 90%;
+    width: 90vw;
+    padding-top: 90px;
+}
+.flex{
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+    align-items: center;
 }
 
 /*################################*/
@@ -67,7 +72,18 @@ section{
 /*             TEXT             */
 /*                             */
 /*############################*/
+*{
+    text-align: center;
+}
+h1{
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+}
 
+h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 li, a, button{
     font-weight: 500;
     font-size: 1rem;
@@ -75,32 +91,20 @@ li, a, button{
     color: var(--primary);
     text-decoration: none;
 }
-#hero h1, #hero p{
-    font-family: "Bodoni Moda", serif;
-    text-align: center;
+.title{
+    font-size: 3rem;
 }
-
-#service .service_card .service_title {
+.service-title {
+    font-size: 1.5rem;
     height: 0;
-    font-display: swap;
-    font-weight: 600;
     position: relative;
     top: -3em;
-    font-size: 1.5rem;
     color: var(--base);
 }
-#service .service_card .service_semis{
-    top: -2.2em;
-}
-#service .service_card p {
-    padding: 10px;
-}
 
-.card_price_box h2 {
-    font-size: 1.3rem;
-}
+/* This is for the lines like in the price of the service section */
 
-h2 span{
+h2 span{ 
     padding: 0 2em;
 }
 
@@ -110,7 +114,7 @@ h2 span{
 /*                             */
 /*############################*/
 
-.service_btn {
+.btn {
     font-weight: 600;
     padding: 0.6rem 1.2rem;
     background-color: var(--accent);
@@ -118,16 +122,18 @@ h2 span{
     cursor: pointer;
     transition: all .3s ease 0s;
 }
-.service_btn:hover{
+.btn:hover{
     background-color: var(--accent2);
 }
+
 /*################################*/
 /*                               */
 /*         HEADER               */
 /*                             */
 /*############################*/
 .logo {
-    margin-top: 20px;
+    top: 1rem;
+    height: 1.5rem;
     cursor: pointer;
 }
 .mobile_nav_toggle {
@@ -189,7 +195,7 @@ h2 span{
         width: 2rem;
         border: none;
         aspect-ratio: 1;
-        top: 2rem;
+        top: 1rem;
         right: 2rem;
         z-index: 9999;
     }
@@ -201,16 +207,15 @@ h2 span{
 /*         HERO SECTION         */
 /*                             */
 /*############################*/
-#hero {
-    flex-direction: row;
+.hero {
     justify-content: flex-start;
     align-items: center;
+}
+.main-presentation{
     margin-left: 15%;
 }
-#hero h1{
-    font-size: 3rem;
-}
-#hero p {
+.hero p {
+    font-family: "Bodoni Moda", serif;
     background-color: var(--base);
     margin-top: 10%;
     width: 40ch;
@@ -218,15 +223,8 @@ h2 span{
 }
 #svg1{
     position: absolute;
-    top: 7%;
+    top: 10%;
     right: 25%;
-    width: 35vw;
-}
-
-#svg2 {
-    margin-top: 100px;
-    position: absolute;
-    right: 35%;
     width: 35vw;
 }
 
@@ -240,54 +238,79 @@ h2 span{
     animation: dash 15s forwards;
 }
 
+@media (max-width: 768px){
+    .main-presentation{
+        margin: 0;
+    }
+    .hero {
+        margin-left: 0;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #svg1{
+        top: 15%;
+        position: absolute;
+        width: 50vw;
+    }
+}
+
 /*################################*/
 /*                               */
 /*      SERVICES SECTION        */
 /*                             */
 /*############################*/
-#service {
+#service{
+    padding-top: 90px;
+}
+.container{
+    background: red;
+}
+.container2{
+    background: steelblue;
+}
+.service{
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
-
-.service_card {
-    margin-top: 20px;
+.service-card {
+    margin: 15px 5px 10px 5px;
     width: 20em;
     border-radius: 15px;
     height: 33em;
     background-color: var(--base2);
 }
-.service_card .service_img {
+.service-card .service-img {
     width: 100%;
     height: 50%;
     border-radius: 15px 15px 0 0;
     box-shadow: inset 0 -5em 50px -10px rgba(0,0,0,0.8);
 }
-.service_card .service_img_1{
+.service-card .service-img-1{
     background: url(img/test.png);
     background-size: cover;
 }
-.service_card .service_img_2{
+.service-card .service-img-2{
     background: url(img/test.png);
     background-size: cover;
 }
-.service_card .service_img_3{
+.service-card .service-img-3{
     background: url(img/test.png);
     background-size: cover;
 }
 
 
-.service_card .service_description{
+.service-card .service-description{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10em;
 }
-.service_card .service_description p {
+.service-card .service-description p {
     width: 80%;
 }
-.service_card .card_price_box{
+.service-card .card-price-box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,15 +318,37 @@ h2 span{
     height: 3em;
 }
 
-.card_price_box h2 {
+.card-price-box h2 {
     width: 60%;
     text-align: center;
     border-bottom: 1px solid #000;
     line-height: 0.1em;
     margin: 10px 0 20px;
 }
-.card_price_box h2 span{
+.card-price-box h2 span{
     background-color: var(--base2);
+}
+
+@media (max-width: 768px){
+    .service-card{
+        width: 100%;
+        height: 80vh;
+    }
+    .service-card img {max-height: 70%;}
+    .service-card .service-description p {
+        margin-top: 5vh;
+    }
+    .service-card .card-price-box {
+        margin-top: 6vh;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    #service{
+        flex-wrap: wrap;
+        height: auto;
+    }
 }
 
 
@@ -313,8 +358,45 @@ h2 span{
 /*       GALERY SECTION         */
 /*                             */
 /*############################*/
+#svg2 {
+    background: url(img/hand.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80%;
+    width: 80%;
+    margin-top: 100px;
+    position: absolute;
+    z-index: 8;
+}
 
+.galery-box {
+    height: 100%;
+    width: min(100%, 1200px);
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.instagram-insert{
+    height: 16em;
+    width: 16em;
+    background: #fff;
+    margin: 1.4rem;
+    z-index: 9;
+}
 
+.instagram-hide{
+    background: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+    #galery{
+        height: auto;
+    }
+    .instagram-hide{
+        display: none;
+    }
+}
 /*################################*/
 /*                               */
 /*          ANIMATIONS          */
@@ -335,20 +417,3 @@ h2 span{
 /*      RESPONSIVE CODE         */
 /*                             */
 /*############################*/
-@media screen and (max-width: 768px){
-    #svg1{ top: 10%;}
-    #service{
-        flex-direction: column;
-        height: auto;
-    }
-    #service .service_card{ margin: 20px; width: 80%; height: 43em;};
-    #service .service_card img {max-height: 70%;}
-}
-
-@media screen and (max-width: 1200px){
-    #service{
-        flex-wrap: wrap;
-        height: auto;
-    }
-    
-}

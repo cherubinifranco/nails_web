@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="flex column">
     <header> 
         <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
 
@@ -15,98 +15,103 @@
 
         <nav id="primary_navigation">
             <ul class="nav_links" data-visible="false">
+                <li><a href="#">Inicio</a></li>
                 <li><a href="#service">Servicios</a></li>
                 <li><a href="#galery">Galeria</a></li>
-                <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <section id="hero">
-        <div id="hero_text">
-            <h1>JAUNE</h1>
-            <h1>CUTS</h1>
+    <section id="hero" class="hero">
+        <div class="main-presentation">
+            <!-- <h1 class="title">JAUNE</h1> -->
+            <!-- <h1 class="title">CUTS</h1> -->
+            <h1 class="title">THIS IS A WORK</h1>
+            <h1 class="title">IN PROCESS</h1>
+            <h1 class="title">Last Update: 12/3/22</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim malesuada egestas condimentum aliquet sapien, fusce. Suspendisse tempus auctor a netus neque fermentum vulputate viverra fusce. Leo ultricies mauris aliquet id. Ut sit nunc viverra quis consequat nibh magna.</p>
         </div>
         <div id="svg1"></div>
     </section>
 
 
-    <section id="service">
-        <div class="service_card">
-            <div class="service_img service_img_1"></div>
-            <div class="service_title service_semis">
-                <span>Semipermanentes</span>
-            </div>
-            <div class="service_description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi eget libero sollicitudin dignissim nisl turpis congue.</p>
-            </div>
-            <div class="card_price_box">
-                <h2><span>$600</span></h2>
-            </div>
-                <button class="service_btn">Seleccionar</button>
-        </div>
+    <section id="service" class="column">
+        <h1 class="title">Nuestros Servicios</h1>
+        <div class="service">
 
-        <div class="service_card">
-            <div class="service_img service_img_2"></div>
-            <div class="service_title">
-                <span>Acrilicas en</span><br> 
-                <span>Polygel</span>
+
+            <div class="service-card">
+                <div class="service-img service-img-1"></div>
+                <div class="service-title">
+                    <span>Semipermanentes</span>
+                </div>
+                <div class="service-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi eget libero sollicitudin dignissim nisl turpis congue.</p>
+                </div>
+                <div class="card-price-box">
+                    <h2><span>$600</span></h2>
+                </div>
+                    <button class="btn">Seleccionar</button>
             </div>
-            <div class="service_description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat sem lectus malesuada dui. Varius orci purus id fringilla faucibus. Donec sagittis, vulputate sagittis mauris praesent nisl.</p>
+
+
+
+            <div class="service-card">
+                <div class="service-img service-img-2"></div>
+                <div class="service-title">
+                    <span>Semipermanentes</span>
+                </div>
+                <div class="service-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi eget libero sollicitudin dignissim nisl turpis congue.</p>
+                </div>
+                <div class="card-price-box">
+                    <h2><span>$600</span></h2>
+                </div>
+                    <button class="btn">Seleccionar</button>
             </div>
-            <div class="card_price_box">
-                <h2><span>$800</span></h2>
+
+
+            
+            <div class="service-card">
+                <div class="service-img service-img-3"></div>
+                <div class="service-title">
+                    <span>Semipermanentes</span>
+                </div>
+                <div class="service-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi eget libero sollicitudin dignissim nisl turpis congue.</p>
+                </div>
+                <div class="card-price-box">
+                    <h2><span>$600</span></h2>
+                </div>
+                    <button class="btn">Seleccionar</button>
             </div>
-                <button class="service_btn">Seleccionar</button>
-        </div>
-        
-        <div class="service_card">
-            <div class="service_img service_img_3"></div>
-            <div class="service_title">
-                <span>Kapping en</span><br> 
-                <span>Gel y Polygel</span>
-            </div>
-            <div class="service_description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, sed magnis velit et eu molestie in. Sapien, quis amet tincidunt tellus at donec urna. A vulputate leo quis senectus bibendum.</p>
-            </div>
-            <div class="card_price_box">
-                <h2><span>$900</span></h2>
-            </div>
-                <button class="service_btn">Seleccionar</button>
+
+
         </div>
     </section>
 
     
-    <section id="galery">
-
-
-
-
+    <section id="galery" class="column">
         <div id="svg2"></div>
+        <h1 class="title">Ultimas Fotos</h1>
+        <div class="galery-box">
+            <div class="instagram-insert"></div>
+            <div class="instagram-insert instagram-hide"></div>
+            <div class="instagram-insert"></div>
+            <div class="instagram-insert"></div>
+            <div class="instagram-insert"></div>
+        </div>
+    </section>
 
 
-
-
-
-
-
-
-
-
-
+    <section id="contact" class="center">
+        <h1>CONTACTO</h1>
     </section>
 
 
 
-
-
-
-    <section id="about"></section>
-    <section id="contact"></section>
 
     <script src="script.js"></script>
 </body>
