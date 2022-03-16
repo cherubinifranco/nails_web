@@ -45,7 +45,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 10%;
     z-index: 100;
     background-color: var(--base);
 }
@@ -53,18 +53,40 @@ section{
     display: flex;
     height: 100vh;
     width: 90vw;
-    padding-top: 90px;
+    padding-top: 40px;
 }
-.flex{
-    display: flex;
-}
+
 .center {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 .column{
+    display: flex;
     flex-direction: column;
     align-items: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* THIS ARE CLASES FOR TESTING */
+.test{
+    background: red;
+}
+.test2{
+    background: steelblue;
 }
 
 /*################################*/
@@ -93,13 +115,6 @@ li, a, button{
 }
 .title{
     font-size: 3rem;
-}
-.service-title {
-    font-size: 1.5rem;
-    height: 0;
-    position: relative;
-    top: -3em;
-    color: var(--base);
 }
 
 /* This is for the lines like in the price of the service section */
@@ -260,57 +275,60 @@ h2 span{
 /*                             */
 /*############################*/
 #service{
-    padding-top: 90px;
-}
-.container{
-    background: red;
-}
-.container2{
-    background: steelblue;
+    height: auto;
 }
 .service{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 .service-card {
     margin: 15px 5px 10px 5px;
-    width: 20em;
+    min-width: 300px;
+    width: 25vw;
     border-radius: 15px;
-    height: 33em;
+    min-height: 500px;
+    height: 25vh;
     background-color: var(--base2);
 }
-.service-card .service-img {
+.service-title {
+    font-size: 1.5rem;
+    height: 0;
+    position: relative;
+    top: -1.75em;
+    color: var(--base);
+}
+.service-img {
     width: 100%;
     height: 50%;
     border-radius: 15px 15px 0 0;
     box-shadow: inset 0 -5em 50px -10px rgba(0,0,0,0.8);
 }
-.service-card .service-img-1{
+.service-img-1{
     background: url(img/test.png);
     background-size: cover;
 }
-.service-card .service-img-2{
+.service-img-2{
     background: url(img/test.png);
     background-size: cover;
 }
-.service-card .service-img-3{
+.service-img-3{
     background: url(img/test.png);
     background-size: cover;
 }
 
-
-.service-card .service-description{
+.service-description{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10em;
+    height: 7.5em;
 }
-.service-card .service-description p {
+.service-description p {
     width: 80%;
 }
-.service-card .card-price-box{
+.card-price-box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -334,17 +352,17 @@ h2 span{
         width: 100%;
         height: 80vh;
     }
-    .service-card img {max-height: 70%;}
-    .service-card .service-description p {
-        margin-top: 5vh;
+    .service-description {
+        height: auto;
+        margin: 6vh 0;
     }
-    .service-card .card-price-box {
-        margin-top: 6vh;
+    .service-card img {max-height: 70%;}
+    .card-price-box {
+        margin: 5px 0;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    
     #service{
         flex-wrap: wrap;
         height: auto;
@@ -368,18 +386,25 @@ h2 span{
     position: absolute;
     z-index: 8;
 }
-
+#galery {
+    height: 100vh;
+}
+.galery-title{
+    position: relative;
+    height: 0;
+}
 .galery-box {
     height: 100%;
-    width: min(100%, 1200px);
-    display: flex;
-    align-items: space-around;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 100%;
+}
+.galery-row {
+    padding-top: 15px;
+    height: 50%;
+    width: 100%;
 }
 .instagram-insert{
-    height: 16em;
-    width: 16em;
+    width: 15em;
+    height: 15em;
     background: #fff;
     margin: 1.4rem;
     z-index: 9;
@@ -393,8 +418,23 @@ h2 span{
     #galery{
         height: auto;
     }
+    .galery-row{
+        flex-wrap: wrap;
+    }
+    .galery-title{
+        margin-top: 30px;
+        position: static;
+        height: auto;
+    }
     .instagram-hide{
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .instagram-insert{
+        width: 80%;
+        padding-top: 80%;
     }
 }
 /*################################*/
