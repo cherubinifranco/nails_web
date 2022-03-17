@@ -44,5 +44,14 @@ c-5.5,9.8-6.3,40.4-6.6,46.1c-1.1,17.3,2.5,41.3,3.2,44.6c1.6,7.3,20.5,38.9,20.5,4
 c0.9,2.9,17.9,5,23.1,3.8c13.2-2.8,3.6-11.4,0.6-13c-17.6-9.4-30.6-10.9-31.5-9.2"/>
 </svg>`
 
-
+function wspMsje(){
+    userName = document.getElementById("nails-name").value;
+    userService = document.getElementById("nails-service").value;
+    userDate = document.getElementById("nails-date").value;
+    userTime = document.getElementById("nails-time").value;
+    let text = "Hola, soy *" + userName + "*.%0aMe quiero hacer *" + userService +"*, y me gustaria hacerlo el día *" + userDate + "* a las *" + userTime + "*.%0aAvisame si estas disponible,%0a¡saludos!";
+    let url = "https://wa.me/5493425515339/?text=" + text;
+    window.open(url);
+    return false;
+}
 
