@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jaunce Cuts</title>
+    <link rel="icon" href="favicon.png">
+</head>
+<body class="flex column">
+    <header> 
+        <a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+
+        <button class="mobile_nav_toggle"></button>
+
+        <nav id="primary_navigation">
+            <ul class="nav_links" data-visible="false">
+                <li><a href="index.html#">Inicio</a></li>
+                <li><a href="index.html#service">Servicios</a></li>
+                <li><a href="index.html#galery">Galeria</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>   
+   
+   <!-- Incluir cabecera -->
+    
+    <section id="contact" class="column center">
+        <h1 class="title">CONTACTO</h1>
+        <form onsubmit="wspMsje()" class="column contact-form">
+            <label for="name">Hola, mi nombre es</label>
+            <input required type="text"id="nails-name">
+            <label for="nails-tipe">me quiero hacer unas</label>
+            <select required name="nails-service" id="nails-service">
+                <option value="" disabled hidden selected></option>
+                <option value="unas uñas semipermanentes">Semipermanentes</option>
+                <option value="unas acrilicas en Polygel">Acrilicas en Polygel</option>
+                <option value="un kapping en Gel y Polygel">Kapping en Gel y Polygel</option>
+            </select>
+            <label for="date">Me gustaría hacerlo el día</label>
+            <input required type="date" id="nails-date" name="nails-date" placeholder="">
+            <label for="nails-time">a las</label>
+            <select required name="nails-time" id="nails-time" default="Seleccionar hora">
+                <option value="" disabled hidden selected></option>
+                <option value="9hs">9 hs</option>
+                <option value="10hs">10 hs</option>
+                <option value="11hs">11 hs</option>
+                <option value="12hs">12 hs</option>
+                <option value="13hs">13 hs</option>
+                <option value="14hs">14 hs</option>
+                <option value="15hs">15 hs</option>
+                <option value="16hs">16 hs</option>
+                <option value="17hs">17 hs</option>
+                <option value="18hs">18 hs</option>
+                <option value="19hs">19 hs</option>
+            </select>
+            <button class="btn" type="submit" value="Submit">Confirmar turno</button>
+        </form>
+    </section>
+
+
+<!-- Incluir Footer -->
+
+
+    
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

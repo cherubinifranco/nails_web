@@ -19,7 +19,7 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#service">Servicios</a></li>
                 <li><a href="#galery">Galeria</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +51,7 @@
                 <div class="card-price-box">
                     <h2><span>$600</span></h2>
                 </div>
-                    <button class="btn">Seleccionar</button>
+                    <a href="#contact"><button class="btn" onclick= "selectService('unas uñas semipermanentes')">Seleccionar</button></a>
             </div>
 
 
@@ -68,7 +68,7 @@
                 <div class="card-price-box">
                     <h2><span>$750</span></h2>
                 </div>
-                    <button class="btn">Seleccionar</button>
+                <a href="#contact"><button class="btn" onclick="selectService('unas acrilicas en Polygel')">Seleccionar</button></a>
             </div>
 
 
@@ -85,7 +85,7 @@
                 <div class="card-price-box">
                     <h2><span>$900</span></h2>
                 </div>
-                    <button class="btn">Seleccionar</button>
+                    <a href="#contact"><button class="btn" onclick="selectService('un kapping en Gel y Polygel')">Seleccionar</button></a>
             </div>
 
 
@@ -108,45 +108,13 @@
             </div>
         </div>
     </section>
-
-
-    <section id="contact" class="column center">
-        <h1 class="title">CONTACTO</h1>
-        <form onsubmit="wspMsje()" class="column center contact-form">
-            <label for="name">Hola, mi nombre es</label>
-            <input required type="text" placeholder="Nombre" id="nails-name">
-            <label for="nails-tipe">me quiero hacer unas</label>
-            <select required name="nails-service" id="nails-service">
-                <option value="" hidden selected>Seleccionar servicio</option>
-                <option value="unas uñas semipermanentes">Semipermanentes</option>
-                <option value="unas acrilicas en Polygel">Acrilicas en Polygel</option>
-                <option value="un kapping en Gel y Polygel">Kapping en Gel y Polygel</option>
-            </select>
-            <label for="date">Me gustaría hacerlo el día</label>
-            <input required type="date" id="nails-date" name="nails-date">
-            <label for="nails-time">a las</label>
-            <select required name="nails-time" id="nails-time" default="Seleccionar hora">
-                <option value="" hidden selected>Seleccionar hora</option>
-                <option value="9hs">9 hs</option>
-                <option value="10hs">10 hs</option>
-                <option value="11hs">11 hs</option>
-                <option value="12hs">12 hs</option>
-                <option value="13hs">13 hs</option>
-                <option value="14hs">14 hs</option>
-                <option value="15hs">15 hs</option>
-                <option value="16hs">16 hs</option>
-                <option value="17hs">17 hs</option>
-                <option value="18hs">18 hs</option>
-                <option value="19hs">19 hs</option>
-            </select>
-            <button class="btn" type="submit" value="Submit">Confirmar turno</button>
-        </form>
-
-
-
-
+    <section id="contact2" class="column center">
+        <h1 class="title">¿Te gusta lo que ves?</h1>
+        <a href="contact.html"><button class="btn">Contactanos!</button> </a>
 
     </section>
+
+    
 
 
 
