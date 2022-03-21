@@ -51,7 +51,7 @@ function wspMsje(){
     userTime = document.getElementById("nails-time").value;
     let text = "Hola, soy *" + userName + "*.%0aMe quiero hacer *" + userService +"*, y me gustaria hacerlo el día *" + userDate + "* a las *" + userTime + "*.%0aAvisame si estas disponible,%0a¡Saludos!";
     let url = "https://wa.me/5493425515339/?text=" + text;
-    document.location(url);
+    window.open(url);
     return false;
 }
 
