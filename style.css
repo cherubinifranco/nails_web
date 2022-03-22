@@ -412,11 +412,34 @@ h2 span{
     background: #fff;
     margin: 1.4rem;
     z-index: 9;
+    
 }
 
 .instagram-hide{
     background: transparent;
 }
+
+.ig-1{
+    background: url(img/ig-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ig-2{
+    background: url(img/ig-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ig-3{
+    background: url(img/ig-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ig-4{
+    background: url(img/ig-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media screen and (max-width: 1000px) {
     #galery{
@@ -431,6 +454,9 @@ h2 span{
         height: auto;
     }
     .instagram-hide{
+        display: none;
+    }
+    #svg2 {
         display: none;
     }
 }
